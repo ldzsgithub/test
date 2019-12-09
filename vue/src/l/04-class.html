@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<style>
+  .active {
+    color : #4cae4c ;
+  }
+  .line {
+    text-decoration: underline;
+  }
+</style>
+<div id="app">
+  <div :class="{active : active ,line : asa}">{{msg}}</div>
+  <button @click="f()">1212</button>
+</div>
+
+<script src="../../vue.js"></script>
+<script>
+  var a = new Vue({
+    el:'#app',
+      data:{
+        msg : "你好",
+        active : true,
+        asa : true
+      },
+      methods:{
+        f : function () {
+            this.asa = !this.asa;
+        }
+      }
+    })
+</script>
+</body>
+</html>

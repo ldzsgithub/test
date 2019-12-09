@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="app">
+  <div>{{msg}}</div>
+  ----------------
+  <mycpn v-bind:ms-gg='msg'></mycpn>
+</div>
+</body>
+
+<template id="tem">
+  <div>
+    <h2>{{msGg}}</h2>
+    <p>{{title}}</p>
+    <p>neirong</p>
+  </div>
+</template>
+<script src="../../vue.js"></script>
+
+<script>
+  const mycpn = {
+    template: '#tem',
+    data(){
+      return {
+        title: "题目题目"
+      }
+    },
+    props: {
+      msGg: {
+        type: String,
+        default: ''
+      }
+    }
+  }
+
+  const a = new Vue({
+    el: "#app",
+    data: {
+      msg: "你好"
+    },
+    components: {
+      mycpn: mycpn
+    }
+  })
+</script>
+
+</html>

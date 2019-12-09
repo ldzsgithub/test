@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+  <div v-bind:title="xuanfu">
+    {{msg}}
+  </div>
+</div>
+</body>
+<script src="../../vue.js"></script>
+<script>
+  var a = new Vue({
+    el:'#app',
+    data: {
+      msg: "vue",
+      xuanfu: "这是一个悬浮属性"
+    },
+    watch: {
+      msg(newValue,oldValue) {
+        alert(newValue);
+        alert(oldValue);
+      }
+    }
+  })
+</script>
+</html>

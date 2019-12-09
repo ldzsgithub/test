@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="app">
+  <div>{{num1}}</div>
+  <cpn :dnumber1="num1" :dnumber2="num2"></cpn>
+</div>
+</body>
+
+<template id="cpn">
+  <div>
+    <h2>{{dnumber1}}</h2>
+    <input type="text" :value="dnumber1" @input="num1input">
+    <h2>{{dnumber2}}</h2>
+    <input type="text" :value="dnumber2" @input="num2input">
+    <input type="button">
+  </div>
+</template>
+
+<script src="../../vue.js"></script>
+<script>
+  const a = new Vue({
+    el: "#app",
+    data: {
+      num1: 1,
+      num2: 2
+    },
+    methods: {
+      num1change(value) {
+        this.num1 = parseFloat(value)
+      },
+      num2change(value) {
+        this.num2 = parseFloat(value)
+      }
+    },
+    components: {
+      cpn: {
+        template: '#cpn',
+        props: {
+          number1: Number,
+          number2: Number
+        },
+        data() {
+          return {
+            dnumber1: this.number1,
+            dnumber2: this.number2
+          }
+        },
+        methods: {
+          num1input(event) {
+            this.dnumber1 = event.target.value;
+            this.$emit('num1change', this.dnumber1)
+          },
+          num2input(event) {
+            this.dnumber2 = event.target.value;
+            this.$emit('num1change', this.dnumber2)
+          }
+        }
+      }
+    }
+  })
+</script>
+
+</html>

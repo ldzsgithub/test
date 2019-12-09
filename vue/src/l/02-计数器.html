@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="main">
+    <h1>数字{{num}}</h1>
+    <button @click='sa'>+</button>
+    <button @click="jian">-</button>
+</div>
+
+</body>
+<script src="../../vue.js"></script>
+<script>
+    var a = new Vue({
+        el:'#main',
+        data:{
+            num:0,
+        },
+        methods:{
+            sa : function () {
+                this.num++
+            },
+            jian: function () {
+                this.num--
+            }
+        }
+    })
+</script>
+</html>
