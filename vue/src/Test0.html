@@ -4,52 +4,33 @@
     <meta charset="utf-8" />
     <title>flex布局</title>
     <style type="text/css">
-        .wrap3{
-            display: flex;
-            height: 300px;
-            flex-wrap: wrap;
+        a:focus{
+            color: #5bc0de;
         }
-        .wrap3 .s{
-            flex: 1;
-            background: red;
+        a:hover{
+            color: red;
         }
-        .wrap3 .b{
-            flex: 50%;
-            background: pink;
+        a:active{
+            color: #4cae4c;
         }
-        .wrap3 .s1{
-            flex: 2;
-            background: blue;
+        h1:focus{
+            color: #5bc0de;
+            /*不生效*/
+        }
+        h1:hover{
+            color: red;
+        }
+        h1:active{
+            color: #4cae4c;
         }
     </style>
 </head>
 <body>
 
-<div class="wrap3">
-    <div class="s">1</div>
+    <h1>3111111111111111</h1>
+    <h1>322222222222222</h1>
+    <h1>33333333333333333</h1>
+    <a href="#">3123</a>
 
-    <div class="s1">2</div>
-
-    <div class="s">3</div>
-
-</div>
-
-<div class="wrap3">
-    <div class="s1">1</div>
-
-    <div class="b">b</div>
-
-    <div class="s">4</div>
-</div>
-
-<div class="wrap3">
-    <div class="s">1</div>
-
-    <div class="s1">2</div>
-
-    <div class="s">3</div>
-
-    <div class="s1">4</div>
-</div>
 </body>
 </html>

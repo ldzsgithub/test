@@ -4,16 +4,21 @@
 <meta charset="UTF-8">
 <title>ss</title>
 <style type="text/css">
- 	.img1{
-            position: absolute;
-            width: 25px;
-            height: 25px;
-         }
+  *{
+    padding: 0px;
+    margin: 0px;
+  }
+  .img1{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: #5bc0de;
+  }
 </style>
 </head>
 <body>
-<script src="../jquery.min.js"></script>
-<img id="map" src="11.png" onclick="getPoint()" onmousewheel="mapZoom()" style="margin-left:10px;margin-top:10px"/>
+<script src="./jquery.min.js"></script>
+<img id="map" src="11.png" onclick="getPoint()" onmousewheel="mapZoom()"/>
 </body>
 <script>
 var imageWidth = $('#map').width();
