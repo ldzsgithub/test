@@ -3,17 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <title>ss</title>
-<style type="text/css">
- 	.img1{
-            position: absolute;
-            width: 25px;
-            height: 25px;
-         }
-</style>
+<link rel="stylesheet" href="../reset.css">
 </head>
+<style type="text/css">
+  .img1{
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    margin-left:10px;
+    margin-top:10px;
+  }
+
+</style>
+
 <body>
 <script src="../../jquery.min.js"></script>
-<img id="map" src="11.png" onclick="getPoint()" onmousewheel="mapZoom()" style="margin-left:10px;margin-top:10px"/>
+<img class="img2" id="map" src="11.png" onclick="getPoint()" onmousewheel="mapZoom()"/>
 </body>
 <script>
 var imageWidth = $('#map').width();
